@@ -347,10 +347,6 @@ public class MainActivity extends AppCompatActivity {
 
     private void checarJogada() {
 
-        if (pontos == 1) {
-            mostraAlerta("GAME OVER!");
-        }
-
         if (pri_peca == seg_peca){
             pontos++;
 
@@ -515,6 +511,10 @@ public class MainActivity extends AppCompatActivity {
             mostraAlerta(String.format("GAME OVER!\nPONTOS = %d", pontos));
         }
 
+        if (pontos == 1) {
+            mostraAlerta("GAME OVER!");
+        }
+        
         pontos_box.setText(String.format("PONTOS = %d", pontos));
     }
 
